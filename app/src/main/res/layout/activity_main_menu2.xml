@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Main Menu"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:background="@android:color/white"
+        android:textStyle="italic|bold"
+        android:textColor="#ff4dff"/>
+
+    <Button
+        android:id="@+id/masuk_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/darker_gray"
+        android:text="Masukan Data"
+        android:textColor="#99ff33"
+        android:textSize="15dp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/lihat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/darker_gray"
+        android:text="Lihat Data"
+        android:textColor="#99ff33"
+        android:textSize="15dp"
+        android:textStyle="bold|italic" />
+
+
+</LinearLayout>
