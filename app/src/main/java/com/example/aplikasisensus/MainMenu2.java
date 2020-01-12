@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -21,7 +22,8 @@ public class MainMenu2 extends AppCompatActivity {
 
     Button btn_msk_data;
     Button btn_lihat;
-
+    TextView user;
+    String user1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,9 @@ public class MainMenu2 extends AppCompatActivity {
 
         btn_msk_data = (Button) findViewById(R.id.masuk_data);
         btn_lihat = (Button) findViewById(R.id.lihat);
+        user = (TextView) findViewById(R.id.user);
+        user1 = getIntent().getExtras().getString("");
+        user.setText(user1);
 
         btn_msk_data.setOnClickListener(new View.OnClickListener() {
             @Override

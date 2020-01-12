@@ -17,12 +17,13 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textStyle="bold|italic" />
+
     <TextView
         android:id="@+id/input_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Masukan Data Diri Anda"
+        android:text="Masukan Data !!"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textStyle="bold|italic" />
@@ -117,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="@android:color/white"
+        android:background="@android:color/holo_blue_light"
         android:text="Simpan Data"
         android:textColor="#99ff99"
         android:textSize="16dp"

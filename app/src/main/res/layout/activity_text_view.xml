@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".text_view">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berikut Data Yang Telah di Simpan !!"
+        android:background="@android:color/white"
+        android:textStyle="italic|bold"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/MyRecyclerview"
         android:layout_width="match_parent"

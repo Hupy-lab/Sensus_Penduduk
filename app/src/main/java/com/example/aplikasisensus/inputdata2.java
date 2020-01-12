@@ -3,6 +3,7 @@ package com.example.aplikasisensus;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -27,6 +28,7 @@ public class inputdata2 extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     Button btnsubmit;
     EditText prov,kota,kecamantan,kelurahan,rt,rw,jml_kk,jml_pen;
+
 
     private FirebaseFirestore db;
 
@@ -65,7 +67,7 @@ public class inputdata2 extends AppCompatActivity {
                 db.collection("sensus")
                         .whereEqualTo("prov", prov.getText().toString())
                         .whereEqualTo("kota", kota.getText().toString())
-                        .whereEqualTo("kecamantan", kecamantan.getText().toString())
+                        .whereEqualTo("kecamatan", kecamantan.getText().toString())
                         .whereEqualTo("kelurahan", kelurahan.getText().toString())
                         .whereEqualTo("rt", rt.getText().toString())
                         .whereEqualTo("rw", rw.getText().toString())
@@ -75,7 +77,7 @@ public class inputdata2 extends AppCompatActivity {
                             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                 QuerySnapshot snapshot = task.getResult();
                                 System.out.println("Masuk");
-                                System.out.println("Hasil: " + snapshot.getDocuments().size());
+                                System.out.println("Hasil: " + snapshot.getDocuments());
                                 if (snapshot.getDocuments().size() > 0) {
                                     Toast toast = Toast.makeText(getApplicationContext(), "Duplikasi data ditemukan", Toast.LENGTH_LONG);
                                     toast.setGravity(Gravity.TOP, 0, 0);
@@ -87,7 +89,7 @@ public class inputdata2 extends AppCompatActivity {
                                             .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<DocumentReference> task) {
-                                                    Toast toast = Toast.makeText(getApplicationContext(), "Sukses membuat data baru", Toast.LENGTH_LONG);
+                                                    Toast toast = Toast.makeText(getApplicationContext(), "Berhasil Membuat Data Baru", Toast.LENGTH_LONG);
                                                     toast.setGravity(Gravity.TOP, 0, 0);
                                                     if (task.isSuccessful()) {
                                                         toast.show();

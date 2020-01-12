@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText username,password;
     Button btnlogin;
-
+    String user1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +38,24 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(MainActivity.this,MainMenu2.class);
+                    user1=username.getText().toString();
+                    intent.putExtra("",user1);
                     MainActivity.this.startActivity(intent);
                     finish();
-                }
-                else{
+                } else if (usernameKey.equals("irfan") && passwordkey.equals("12345")) {
+
+                    Toast.makeText(getApplicationContext(), "Login Success",
+                            Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(MainActivity.this,MainMenu2.class);
+                    user1=username.getText().toString();
+                    intent.putExtra("",user1);
+                    MainActivity.this.startActivity(intent);
+                    finish();
+                } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setMessage("Username/Password yang anda masukan salah ")
-                            .setNegativeButton("Coba Lagi !",null).create().show();
+                            .setNegativeButton("Coba Lagi !", null).create().show();
                 }
             }
         });

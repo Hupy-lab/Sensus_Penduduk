@@ -9,5 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Output"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:paddingLeft="20dp"/>
 </LinearLayout>
